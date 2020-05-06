@@ -1,1 +1,1 @@
-const handleSubmit = require('./formHandler')
+import handleSubmt from './formHandler'
