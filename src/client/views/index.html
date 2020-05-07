@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
 
-        <header>
-            <div class="">
-                Logo
+<body>
+
+    <header class='site-header'>
+        <div class="">
+            <h3>Artcl Anlzr</h3>
+        </div>
+    </header>
+
+    <main>
+        <section class='form-section'>
+            <form class="url-form" onsubmit="return handleSubmit(event)">
+                <input class='url-input' id="url" type="text" name="input" value="" onblur="onBlur()"
+                    placeholder="URL">
+                <input class='submit-button' type="submit" name="" value="submit" onclick="return handleSubmit(event)"
+                    onsubmit="return handleSubmit(event)">
+            </form>
+        </section>
+        <section class='text-section'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Sed augue lacus viverra vitae. Mi bibendum neque egestas congue quisque egestas
+                diam in arcu. In hac habitasse platea dictumst vestibulum. Sed euismod nisi porta lorem mollis aliquam.
+                Scelerisque felis imperdiet proin fermentum leo vel orci porta. Morbi tristique senectus et netus et.
+                Ipsum nunc aliquet bibendum enim. Faucibus in ornare quam viverra orci sagittis. Mattis enim ut tellus
+                elementum sagittis. Cursus risus at ultrices mi tempus. Ac tortor vitae purus faucibus ornare. Pulvinar
+                neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Et sollicitudin ac orci
+                phasellus egestas tellus rutrum. Ut pharetra sit amet aliquam id diam.
+
+                Et tortor consequat id porta nibh venenatis cras sed. Volutpat sed cras ornare arcu dui vivamus. Feugiat
+                scelerisque varius morbi enim. Nec feugiat nisl pretium fusce id velit ut tortor pretium. Id neque
+                aliquam vestibulum morbi blandit. Facilisi nullam vehicula ipsum a arcu. Urna porttitor rhoncus dolor
+                purus. Etiam dignissim diam quis enim lobortis. Amet mauris commodo quis imperdiet. Blandit massa enim
+                nec dui. Gravida rutrum quisque non tellus orci ac. Elementum nibh tellus molestie nunc.
+
+                Pharetra magna ac placerat vestibulum lectus mauris. Sit amet nisl purus in mollis. Rhoncus dolor purus
+                non enim praesent elementum facilisis leo vel. Mauris augue neque gravida in. Lacinia quis vel eros
+                donec. Arcu non sodales neque sodales ut etiam sit. Consectetur adipiscing elit pellentesque habitant
+                morbi tristique senectus et netus. Aliquam purus sit amet luctus venenatis. Pretium fusce id velit ut
+                tortor pretium viverra suspendisse potenti. In nisl nisi scelerisque eu ultrices vitae auctor eu. Et
+                ligula ullamcorper malesuada proin libero nunc consequat interdum. Nunc mi ipsum faucibus vitae aliquet
+                nec ullamcorper sit amet. Netus et malesuada fames ac turpis egestas integer.</p>
+        </section>
+
+        <section class='polarity-section'>
+            <div id="results">
+                <h2>Polarity</h2>
+                <h1>neutral</h1>
+                <span class='confidence'>confidence of 0.829785943031311</span>
             </div>
-            <div class="">
-                navigation
+        </section>
+
+        <section class='subjective-section'>
+            <div id="results">
+                <h2>Subjectivity</h2>
+                <h1>Subjective</h1>
+                <span class='confidence'>confidence of 1.0</span>
             </div>
-        </header>
+        </section>
+    </main>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            <section>
+    <footer>
+        <p>This is a footer</p>
+    </footer>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
+</body>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-    </body>
 </html>
