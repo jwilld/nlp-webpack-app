@@ -4,7 +4,6 @@ dotenv.config();
 const api_key = process.env.API_KEY;
 const app_id = process.env.API_ID;
 
-
 let path = require("path");
 const express = require("express");
 const mockAPIResponse = require("./mockAPI.js");
@@ -16,27 +15,33 @@ const urlapi = new aylienAPI({
   application_id: app_id,
 });
 
-const getSentiment = async () => {
-  const sentiment = await urlapi.sentiment(
+const getSentiment = async (req,res,url) => {
+   await urlapi.sentiment(
     {
       url:
-        "https://www.cnn.com/2020/05/05/us/naked-bike-ride-portland-coronavirus-trnd/index.html",
+        url,
     },
     (error, response) => {
       if (error === null) {
-        console.log(response);
+        res.send( response);
       } else {
-        console.log(error);
+        res.send(error);
       }
     }
   )
-  return sentiment
 };
-getSentiment()
-
-
 
 const app = express();
+
+/* Middleware*/
+const bodyParser = require('body-parser');
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// Cors for cross origin allowance
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.static("dist"));
 
@@ -54,6 +59,10 @@ app.listen(8080, function () {
 
 app.get("/test", function (req, res) {
   res.send(mockAPIResponse);
+});
+
+app.post("/sentiment", async (req, res) => {
+  getSentiment(req,res,req.body.url) 
 });
 
 module.exports = getSentiment;
