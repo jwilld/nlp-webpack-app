@@ -24,7 +24,7 @@ const getSentiment = async () => {
     },
     (error, response) => {
       if (error === null) {
-        return response;
+        console.log(response);
       } else {
         console.log(error);
       }
@@ -32,6 +32,7 @@ const getSentiment = async () => {
   )
   return sentiment
 };
+getSentiment()
 
 
 
