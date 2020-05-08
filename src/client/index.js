@@ -1,7 +1,7 @@
-import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+import { urlCheck} from './js/urlChecker'
+import { fetchSet } from './js/fetchSet'
 import '../client/styles/base.scss'
 
-document.querySelector('.submit-button').addEventListener('click',handleSubmit)
 
-export {checkForName, handleSubmit}
+
+export {urlCheck, fetchSet}

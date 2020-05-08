@@ -15,6 +15,7 @@ const urlapi = new aylienAPI({
   application_id: app_id,
 });
 
+
 const getSentiment = async (req,res,url) => {
    await urlapi.sentiment(
     {
