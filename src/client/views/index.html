@@ -4,6 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title>Text Anlzr</title>
+    <script>
+        // Check that service workers are supported
+        // if ('serviceWorker' in navigator) {
+        //     // Use the window load event to keep the page load performant
+        //     console.log('hey I am your service worker');
+        //     window.addEventListener('load', () => {
+        //         navigator.serviceWorker.register('/service-worker.js');
+        //     });
+        // }
+    // </script>
 </head>
 
 <body>
@@ -29,7 +39,7 @@
             <div id="results">
                 <h2>Polarity</h2>
                 <h1 class='polarity-result'></h1>
-                <span class='polarity-confidence'></span>
+                <span class='polarity-confidence confidence'></span>
             </div>
         </section>
 
@@ -37,7 +47,7 @@
             <div id="results">
                 <h2>Subjectivity</h2>
                 <h1 class='subjectivity-result'></h1>
-                <span class='subjectivity-confidence'></span>
+                <span class='subjectivity-confidence confidence'></span>
             </div>
         </section>
     </main>

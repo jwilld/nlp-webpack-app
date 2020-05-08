@@ -5,5 +5,4 @@ import '../client/styles/base.scss'
 document.querySelector('.submit-button').addEventListener('click',fetchSet)
 
 
-
 export {urlCheck, fetchSet}
