@@ -1,6 +1,6 @@
 import { fetchSet } from "./fetchSet";
 
-describe("fetchSet", () => {
+describe("fetchSet",  () => {
   // jsdom
   document.body.innerHTML =
     `<form class="url-form">` +
@@ -16,8 +16,8 @@ describe("fetchSet", () => {
 
   const event = { preventDefault: () => {} };
 
-  window.fetch = jest.fn().mockImplementation(() => {
-    return Promise.resolve({
+  window.fetch = jest.fn().mockImplementation(async () => {
+    return await Promise.resolve({
       json: () =>
         Promise.resolve({
           title: "test json response",

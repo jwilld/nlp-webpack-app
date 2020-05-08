@@ -1,6 +1,6 @@
 import { urlCheck } from "./urlChecker";
 
-const fetchSet = (event) => {
+const fetchSet = async (event) => {
   event.preventDefault();
 
   const urlPlaceholder = document.getElementById("url")
@@ -10,7 +10,7 @@ const fetchSet = (event) => {
   let formText = document.getElementById("url").value;
 
   if(urlCheck(formText) === true){
-    const result = fetch("http://localhost:8080/sentiment",{
+    const result = await fetch("http://localhost:8080/sentiment",{
       method:"POST",
       headers: {
         "Content-Type": "application/json",
