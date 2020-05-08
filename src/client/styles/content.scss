@@ -1,0 +1,41 @@
+.text-section{
+    grid-row:2/4;
+    grid-column: 1;
+    overflow: scroll;
+    line-height: 25px;
+    font-size: 18px;
+    padding: 0 10px 0 10px;
+}
+.polarity-section{
+    grid-row:2; grid-column: 2;
+    background-color: $response-color-two;
+    @include center-section;
+
+}
+.subjective-section{
+    grid-row: 3;
+    grid-column: 2;
+    background-color: $response-color-one;
+    @include center-section;
+}
+.confidence{
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .text-section {
+        grid-row: 2;
+        overflow: scroll;
+    }
+    .text-content {
+        margin: 0;
+    }
+    .polarity-section {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .subjective-section {
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
