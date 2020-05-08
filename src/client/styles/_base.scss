@@ -1,12 +1,9 @@
-$text-color: #373c3d;
-$response-color-one: #fe5f55;
-$response-color-two: #fff1c1;
-
-
+@use './style-variables';
 @import "./footer.scss";
 @import "./header.scss";
 @import "./form.scss";
-// @import "./content.scss";
+@import "./content.scss";
+
 
 
 @mixin center-section {
